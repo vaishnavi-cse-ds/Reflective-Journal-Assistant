@@ -1,6 +1,6 @@
 # 📓 Reflective Journal Assistant
 
-A minimalist, calm, and distraction-free generative AI personal journal prompt and reflection assistant built with **Streamlit** and powered by the **Grok API (xAI)** via the OpenAI-compatible endpoint.
+A minimalist, calm, and distraction-free generative AI personal journal prompt and reflection assistant built with **Streamlit** and powered by the **Groq API** via the OpenAI-compatible endpoint.
 
 ---
 
@@ -25,7 +25,7 @@ A minimalist, calm, and distraction-free generative AI personal journal prompt a
 
 - **Python 3.10+**
 - **Streamlit**
-- **Grok API (xAI)** via `openai` SDK (`base_url="https://api.x.ai/v1"`)
+- **Groq API** via `openai` SDK (`base_url="https://api.x.ai/v1"`)
 - **python-dotenv**
 
 ---
@@ -56,10 +56,7 @@ pip install -r requirements.txt
 ### 4. Configure your API key
 Create or edit the `.env` file in the project root:
 ```env
-GROK_API_KEY=xai-your-actual-api-key-here
-```
-> [!NOTE]
-> The `.gitignore` file already excludes `.env` to prevent accidental credential leaks.
+GROQ_API_KEY=your-actual-api-key-here
 
 ### 5. Run the application
 ```bash
@@ -86,10 +83,10 @@ Open [http://localhost:8501](http://localhost:8501) in your browser.
    - Go to [share.streamlit.io](https://share.streamlit.io/) and log in with GitHub.
    - Click **New app**, select your repository, branch (`main`), and set the main file path to `app.py`.
    - Before launching, open **Advanced Settings > Secrets**.
-   - Paste your Grok API key:
+   - Paste your Groq API key:
      ```toml
-     GROK_API_KEY = "xai-your-actual-api-key-here"
+     GROQ_API_KEY = "your-actual-api-key-here"
      ```
    - Click **Save** and **Deploy!**
 
-The app will seamlessly detect `st.secrets["GROK_API_KEY"]` on Streamlit Community Cloud!
+The app will seamlessly detect `st.secrets["GROQ_API_KEY"]` on Streamlit Community Cloud!
